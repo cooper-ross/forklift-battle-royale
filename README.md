@@ -29,6 +29,9 @@ This is a super basic multiplayer battle royale type thing I created to help tea
 - Run `node index.js` to start the server, or just press the start button on replit
 - Open `localhost:4000` in your browser to play.
 
+If you want to play with others, you'll need to get them to use your localhost. Using the same adress won't work: you need to find what your local network's IP of that computer is. Then other people can access to your site by that IP.
+You can find your local network's IP by go to Command Prompt or press Windows + R then type in ipconfig. It will give out some information and your local IP should look like 192.168.1.x.
+Additionally, make sure your firewall allows incoming connections to your local server. On Windows, you may have already allowed this at install time, but possibly for private networks only. If the connection isn't working, an easy fix might be to ensure your host PC's network connection is set as private, and if it is but the connection still isn't working, take a look at your application firewall settings.
 
 ## Dependencies
 - node.js
