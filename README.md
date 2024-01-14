@@ -1,8 +1,7 @@
-# Forklift Battle Royale
-
 <p align="center">
   <img src="./client/forklift.png" alt="drawing" width="150"/>
 </p>
+<h1 align="center">Forklift Battle Royale</h1>
 
 This is a super basic multiplayer battle royale type thing I created to help teach JavaScript learners about the relevance of data structures and OOP. It's not the best code, but it's not the worst either. Keep in mind this was thrown together in a few hours, so a lot of stuff like client side prediction and interpolation is missing. I might consider adding that stuff in the future, but for now, this is what we have. I'm not going to be updating this much, but feel free to fork it and make your own version. I'd love to see what you come up with!
 
