@@ -7,7 +7,13 @@ This is a super basic multiplayer battle royale type thing I created to help tea
 
 > The server side code is pretty clean, but the client side code is a *bit* messy. I might clean it up in the future, but for now, it's fine.
 
-![image](https://github.com/cooper-ross/forklift-battle-royale/assets/120236631/20a19237-8b3c-480b-ad3c-e0f46c5200eb)
+
+
+
+https://github.com/cooper-ross/forklift-battle-royale/assets/120236631/d24727bc-d605-4e0b-b7ba-cc7d43fc2ef1
+
+
+
 
 ## Performance details
 - The server can handle about 8 players per 1024 MB of RAM, which is about 128 MB per player, so not bad at all
