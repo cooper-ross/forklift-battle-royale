@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Multiplayer PVP Thing</title>
+    <style></style>
+    <link href="css.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <article id="pregame-screen">
+      <div class="menu">
+        <h1>Forklift Battle Royale</h1>
+        <p>Use WASD to move and click to shoot.</p>
+        <p>Use the arrow keys to move and click to shoot.</p>
+        <actionform>
+          <input type="text" id="name" placeholder="Name">
+          <input type="submit" id="submit" value="Enter the game"> 
+        </actionform>
+      </div>
+    </article>
+    
+    <canvas id="canvas"></canvas>
+  
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
