@@ -7,10 +7,15 @@ This is a super basic multiplayer battle royale type thing I created to help tea
 
 > The server side code is pretty clean, but the client side code is a *bit* messy. I might clean it up in the future, but for now, it's fine.
 
+![image](https://github.com/cooper-ross/forklift-battle-royale/assets/120236631/20a19237-8b3c-480b-ad3c-e0f46c5200eb)
+
 ## Performance details
 - The server can handle about 8 players per 1024 MB of RAM, which is about 128 MB per player, so not bad at all
 - The tick speed is 60 ticks per second, which is pretty good for a game like this, especially since there's no interpolation.
 - There is no client side prediction, so the game will feel a bit laggy on high ping, but it's not too bad.
+
+![image](https://github.com/cooper-ross/forklift-battle-royale/assets/120236631/17c52117-ecb2-495a-9658-f732a602de17)
+![image](https://github.com/cooper-ross/forklift-battle-royale/assets/120236631/9fed229e-1adc-4a20-8444-8e20a4ee120f)
 
 ## Other notes
 - Pretty much everything is handled on the server, but cheats can still be made since the client is sent all the players positions and stuff. I might add some server side checks in the future, but for now, it's just a fun little project. Maybe even try to make your own cheat, it's not too hard. There's already a cheat for users named John I added for fun.
