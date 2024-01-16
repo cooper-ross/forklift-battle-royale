@@ -140,8 +140,8 @@ class Player {
         // Handle player movement
         if (movement) {
             this.viewDir = movement.viewDirection;
-            this.xSpeed += (movement.left ? -2 : 0) + (movement.right ? 2 : 0);
-            this.ySpeed += (movement.up ? -2 : 0) + (movement.down ? 2 : 0);
+            this.xSpeed += (movement.left ? -1.5 : 0) + (movement.right ? 1.5 : 0);
+            this.ySpeed += (movement.up ? -1.5 : 0) + (movement.down ? 1.5 : 0);
         }
 
         // Limit player position within boundaries
@@ -176,6 +176,21 @@ class Player {
             const collisions = this.detectCollision(this, block);
             if (collisions) {
                 this.handleCollisions(collisions, block);
+            }
+        });
+
+        // Pickup stuff
+        gameState.pickups.forEach(pickup => {
+            const collisions = this.detectCollision(this, pickup);
+            if (collisions) {
+                this.health = Math.min(this.health + pickup.health, 100);
+
+                this.inventory.forEach(gun => {
+                    gun.totalAmmo += pickup.ammo;
+                });
+
+                const index = gameState.pickups.indexOf(pickup);
+                return gameState.pickups.splice(index, 1); 
             }
         });
 

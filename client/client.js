@@ -6,7 +6,7 @@ var hideMouse = false;
 
 var offset = { x: 0, y: 0 };
 
-var zoom = 1;
+var zoom = 1.8;
 
 var shieldDisplay = 0;
 var redShieldEffect = 0;
@@ -151,10 +151,10 @@ canvas.addEventListener("mouseleave", function () {
 canvas.addEventListener("wheel", function (event) {
   if (event.deltaY < 0) {
     playerMovement.selectedSlot--;
-    if (playerMovement.selectedSlot < 0) playerMovement.selectedSlot = 2;
+    if (playerMovement.selectedSlot < 0) playerMovement.selectedSlot = 3;
   } else {
     playerMovement.selectedSlot++;
-    if (playerMovement.selectedSlot > 2) playerMovement.selectedSlot = 0;
+    if (playerMovement.selectedSlot > 3) playerMovement.selectedSlot = 0;
   }
 });
 
@@ -241,6 +241,23 @@ function drawBlock(block) {
   ctx.lineWidth = 5;
   ctx.strokeStyle = '#343334';
   ctx.strokeRect(block.xPos + offset.x, block.yPos + offset.y, block.width, block.height);
+}
+
+function drawPickup(pickup) {
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(pickup.xPos + offset.x, pickup.yPos + offset.y, pickup.width, pickup.height);
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = '#343334';
+  ctx.strokeRect(pickup.xPos + offset.x, pickup.yPos + offset.y, pickup.width, pickup.height);
+  
+
+  if (pickup.type === "health") {
+    ctx.strokeStyle = '#FF4C4C';
+    ctx.strokeText("+", pickup.xPos + offset.x + pickup.width/2, pickup.yPos + offset.y + pickup.height/2);
+  } else {
+    ctx.strokeStyle = '#919191';
+    ctx.strokeText("[]", pickup.xPos + offset.x + pickup.width/2, pickup.yPos + offset.y + pickup.height/2);
+  }
 }
 
 function drawTree(tree, gameState) {
@@ -586,6 +603,11 @@ socket.on('state', (gameState) => {
 
   drawBackground();
   drawGrid();
+
+  gameState.pickups.forEach(pickup => {
+    //drawBullet(bullet, gameState);
+    drawPickup(pickup);
+  });
 
   gameState.bullets.forEach(bullet => {
     drawBullet(bullet, gameState);

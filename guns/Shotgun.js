@@ -4,7 +4,7 @@ const Gun = require('./Gun');
 class Shotgun extends Gun {
     constructor(pelletCount, pelletSpread, damage) {
         // Custom properties for Shotgun
-        super(2000, 200, 15, damage, 5, 6, 4, 70, 'shotgun');
+        super(2000, 100, 15, damage, 5, 6, 4, 70, 'shotgun');
 
         this.pelletCount = pelletCount;
         this.pelletSpread = pelletSpread;
