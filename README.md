@@ -5,8 +5,8 @@
 
 This is a super basic multiplayer battle royale type thing I created to help teach JavaScript learners about the relevance of data structures and OOP. It's not the best code, but it's not the worst either. Keep in mind this was thrown together in a few hours, so a lot of stuff like client side prediction and interpolation is missing. I might consider adding that stuff in the future, but for now, this is what we have. I'm not going to be updating this much, but feel free to fork it and make your own version. I'd love to see what you come up with!
 
-> The server side code is pretty clean, but the client side code is a *bit* messy. I might clean it up in the future, but for now, it's fine.
-
+> [!IMPORTANT]
+> The server side code is pretty clean, but the client side code is a *bit* messy. I might clean it up in the future, but for now, it's fine for most stuff. I did commit to using only canvas, so you'll find a few issues with the gun drawing or icons if you try to make your own.
 
 
 
