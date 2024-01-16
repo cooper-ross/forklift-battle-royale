@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./client/forklift.png" alt="drawing" width="150"/>
+  <img src="https://github.com/cooper-ross/forklift-battle-royale/assets/120236631/ba0f8842-803e-48ec-84ca-6cee22191bbb" alt="Forklift Logo" width="150"/>
 </p>
 <h1 align="center">Forklift Battle Royale</h1>
 
